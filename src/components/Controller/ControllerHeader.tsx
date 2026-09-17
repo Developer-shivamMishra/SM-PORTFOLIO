@@ -67,14 +67,16 @@ const ControllerHeader = ({ activeSection }: Props) => {
               className={`h-5 w-5  ${iconColorClass} ${iconHoverClass}`}
             />
           </Link> */}
-          <Link
-            href={`/blogs?from=${activeSection || "meet-me"}`}
-            className="cursor-pointer"
-          >
-            <RiArticleLine
-              className={`h-5 w-5 ${iconColorClass} ${iconHoverClass}`}
-            />
-          </Link>
+        <Link
+  href="https://medium.com/@sm2275470"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="cursor-pointer"
+>
+  <RiArticleLine
+    className={`h-5 w-5 ${iconColorClass} ${iconHoverClass}`}
+  />
+</Link>
         </div>
       </div>
     </div>
