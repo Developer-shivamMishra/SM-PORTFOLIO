@@ -350,7 +350,7 @@ export default function Page() {
         </div>
 
         <div className="w-50 h-5 flex justify-end">
-          <p className="text-xs opacity-80 pr-2 pt-0.5">© Sk Akram</p>
+          <p className="text-xs opacity-80 pr-2 pt-0.5">© Shivam Mishra</p>
         </div>
       </div>
     </div>
