@@ -72,10 +72,10 @@ export const metadata: Metadata = {
     siteName: "Shivam Mishra",
     images: [
       {
-        url: "https://www.shivamishra.com/og-image.jpg?v=2",
+        url: "https://shivam-ecru-eight.vercel.app//profile-image.jpg?v=2",
         width: 1200,
         height: 630,
-        alt: "Shivam Mishra Portfolio",
+        alt: "Sk Akram Portfolio",
       },
     ],
     locale: "en_US",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shivam Mishra Portfolio",
     description: "Shivam Mishra - Software Developer",
-    images: ["https://www.shivamishra.com/og-image.jpg?v=2"],
+    images: ["https://shivam-ecru-eight.vercel.app/profile-image.jpg?v=2"],
     creator: "@shivamdev",
   },
 
