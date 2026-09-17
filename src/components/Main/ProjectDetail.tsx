@@ -83,9 +83,9 @@ const ProjectDetail = ({ projectId, onBack }: Props) => {
           <p className="opacity-90 leading-relaxed mb-6">{project.desc}</p>
 
           <div className="flex gap-4">
-             {project.link && (
+             {project.liveLink && (
               <Link
-                href={project.link}
+                href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg border ${borderClass} hover:bg-white/10 transition-colors`}
