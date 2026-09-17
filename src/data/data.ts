@@ -1,93 +1,53 @@
 export const socials = [
   {
     name: "X (Twitter)",
-    url: "https://x.com/akramcodez",
-    handle: "@akramcodez",
+    url: "https://x.com/cheaf25master",
+    handle: "@cheaf25master",
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/akramcodez",
-    handle: "/in/akramcodez",
+    url: "https://www.linkedin.com/in/shivam-mishra-a6302429b/",
+    handle: "/in/shivam-mishra-a6302429b",
   },
   {
     name: "GitHub",
-    url: "https://github.com/akramcodez",
-    handle: "/akramcodez",
+    url: "https://github.com/Developer-shivamMishra",
+    handle: "/Developer-shivamMishra",
   },
   {
     name: "LeetCode",
-    url: "https://leetcode.com/u/akramcodez",
-    handle: "/u/akramcodez",
+    url: "https://leetcode.com/u/Shivam25mishra/",
+    handle: "/u/Shivam25mishra",
   },
-  {
-    name: "Peerlist",
-    url: "https://peerlist.io/akramcodez",
-    handle: "/akramcodez",
-  },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/akramcodez",
-    handle: "@akramcodez",
-  },
-  {
-    name: "YouTube",
-    url: "https://www.youtube.com/@akramcodez",
-    handle: "/akramcodez",
-  },
+ 
+ 
+
   {
     name: "Email",
-    url: "https://mail.google.com/mail/u/0/?fs=1&to=skakram00zz@gmail.com&tf=cm",
+    url: "https://mail.google.com/mail/u/0/?fs=1&to=sm2275470@gmail.com&tf=cm",
     handle: "Contact me",
   },
 ];
 
 export const skills = [
-  "MERN",
-  "NextJS",
-  "TypeScript",
+  "MERN",,
   "Tailwind",
-  "MySQL",
   "MongoDB",
-  "Prisma",
   "Postman",
   "Git",
   "GitHub",
-  "Python",
-  "Java",
   "Cpp",
-  "C",
   "CI/CD",
 ];
 
 export const projects = [
   {
-    name: "OsFit",
-    tech: "Next.js • Tailwind • Supabase",
-    desc: "AI-powered tool for analyzing GitHub files and solving issues. Supports 20+ languages",
-    link: "https://github.com/akramcodez/osfit",
-    liveLink: "https://osfit.akramcodez.com",
+    name: "DevNexus",
+    tech: "Reactjs • Tailwind • MongoDB",
+    desc: "DevNexus is a simple platform where developers can find and connect with other developers.",
+    liveLink: "https://devs-nexus-web.vercel.app/",
   },
-  {
-    name: "VeoMate",
-    tech: "Currently in building state",
-    desc: "The Context-Aware Work & Communication Platform",
-    link: "https://github.com/akramcodez/veomate-waitlist",
-    liveLink: "https://waitlist.veomate.com",
-  },
-  {
-    name: "PIVA",
-    tech: "Next.js • Prisma • T3 Stack",
-    desc: "AI-powered webinar platform",
-    link: "https://github.com/akramcodez/piva",
-    liveLink: "https://piva.akramcodez.com",
-  },
-  {
-    name: "MyTube",
-    tech: "React • TypeScript • Tailwind",
-    desc: "Modern YouTube clone",
-    link: "https://github.com/akramcodez/mytube_home",
-    liveLink: "https://my-tube-omega-lime.vercel.app",
-  },
+  
 ];
 
 export const repos = [

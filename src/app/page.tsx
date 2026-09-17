@@ -12,7 +12,6 @@ import Loading from "@/components/Loading";
 
 import { useTheme } from "next-themes";
 import { useEffect, useState, useRef } from "react";
-import Experience from "@/components/Main/Experience";
 
 import ProjectDetail from "@/components/Main/ProjectDetail";
 import {
@@ -27,7 +26,7 @@ const VALID_SECTIONS = new Set(["meet-me", "skills", "my-work", "socials"]);
 const SECTION_ID_MAP: Record<string, string> = {
   "meet-me": "meet-me",
   skills: "skills",
-  "my-work": "experience",
+  "my-work": "projects",
   socials: "socials",
 };
 
@@ -339,7 +338,6 @@ export default function Page() {
                       <>
                         <MeetMe />
                         <Skills />
-                        <Experience />
                         <Projects />
                         <Socials />
                       </>

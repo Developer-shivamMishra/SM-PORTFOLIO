@@ -69,7 +69,7 @@ export default function QuickMenu({ fromSection }: { fromSection?: string }) {
         className={`${menuClass} ${isOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"}`}
       >
         {/* Star Repo */}
-        <Link
+        {/* <Link
           href="https://github.com/akramcodez/Akram-Portfolio"
           target="_blank"
           rel="noopener noreferrer"
@@ -77,25 +77,25 @@ export default function QuickMenu({ fromSection }: { fromSection?: string }) {
         >
           <Star className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
           <span className={textClass}>Star Repo</span>
-        </Link>
+        </Link> */}
 
-        {/* Blogs */}
+        {/* Blogs
         <Link
           href={fromSection ? `/blogs?from=${fromSection}` : "/blogs"}
           className={menuItemClass}
         >
           <RiArticleLine className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
           <span className={textClass}>Blogs</span>
-        </Link>
+        </Link> */}
         
-        {/* Support Me */}
+        {/* Support Me
         <Link
           href={fromSection ? `/support?from=${fromSection}` : "/support"}
           className={menuItemClass}
         >
           <LuHeartHandshake className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
           <span className={textClass}>Support Me</span>
-        </Link>
+        </Link> */}
 
         {/* Theme Toggle */}
         <button onClick={toggleTheme} className={menuItemClass}>

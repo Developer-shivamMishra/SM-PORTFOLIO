@@ -15,11 +15,10 @@ const MeetMe = () => {
               ABOUT ME
             </h2>
             <p className="text-sm lg:text-base xl:text-md leading-relaxed max-w-3xl mx-auto ">
-              Hi! I&apos;m <span className="[font-weight:700]">Sk Akram</span>,
-              a <span className="[font-weight:700]">19 y/o</span> software developer ッ who&apos;s always ready to{" "}
-              <span className="[font-weight:700]">explore</span> new things. I
-              actively contribute to{" "}
-              <span className="[font-weight:700]">open source</span>, build
+              Hi! I&apos;m <span className="[font-weight:700]">Shivam Mishra</span>,
+              a  software developer ッ who&apos;s always ready to{" "}
+              <span className="[font-weight:700]">explore</span> new things. 
+             , build
               real-world <span className="[font-weight:700]">projects</span>,
               and continuously sharpen my{" "}
               <span className="[font-weight:700]">DSA skills</span>.
@@ -35,12 +34,12 @@ const MeetMe = () => {
               you need a committed developer to build or improve your product,
               feel free to connect.
               <Link
-                href="https://mail.google.com/mail/u/0/?fs=1&to=skakram00zz@gmail.com&tf=cm"
+                href="https://mail.google.com/mail/u/0/?fs=1&to=sm2275470@gmail.com&tf=cm"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block mt-3 font-bold underline [text-decoration-thickness:1px]"
               >
-                skakram00zz@gmail.com
+               sm2275470@gmail.com
               </Link>
             </p>
           </div>

@@ -38,19 +38,17 @@ const thasadith = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.akramcodez.com"),
-  title: "Sk Akram",
-  description: "Hey! I'm Sk Akram, Software Developer",
+  metadataBase: new URL("https://www.shivamishra.com"),
+  title: "Shivam Mishra",
+  description: "Hey! I'm Shivam Mishra, Software Developer",
   keywords: [
-    "Sk Akram",
-    "Full Stack Developer",
-    "MERN Stack",
+    "Shivam Mishra",
+    "Software Developer",
     "React Developer",
-    "Next.js Developer",
+   
     "Node.js Developer",
     "MongoDB",
     "JavaScript",
-    "TypeScript",
     "Backend Developer",
     "Computer Science Student",
     "Web Developer",
@@ -60,24 +58,24 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Sk Akram",
-      url: "https://github.com/akramcodez",
+      name: "Shivam Mishra",
+      url: "https://github.com/Developer-shivamMishra",
     },
   ],
-  creator: "Sk Akram",
-  publisher: "Sk Akram",
+  creator: "Shivam Mishra",
+  publisher: "Shivam Mishra",
 
   openGraph: {
-    title: "Sk Akram Portfolio",
-    description: "Sk Akram - Software Developer",
-    url: "https://www.akramcodez.com",
-    siteName: "Sk Akram",
+    title: "Shivam Mishra Portfolio",
+    description: "Shivam Mishra - Software Developer",
+    url: "https://www.shivamishra.com",
+    siteName: "Shivam Mishra",
     images: [
       {
-        url: "https://www.akramcodez.com/og-image.jpg?v=2",
+        url: "https://www.shivamishra.com/og-image.jpg?v=2",
         width: 1200,
         height: 630,
-        alt: "Sk Akram Portfolio",
+        alt: "Shivam Mishra Portfolio",
       },
     ],
     locale: "en_US",
@@ -86,10 +84,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Sk Akram Portfolio",
-    description: "Sk Akram - Software Developer",
-    images: ["https://www.akramcodez.com/og-image.jpg?v=2"],
-    creator: "@akramcodez",
+    title: "Shivam Mishra Portfolio",
+    description: "Shivam Mishra - Software Developer",
+    images: ["https://www.shivamishra.com/og-image.jpg?v=2"],
+    creator: "@shivamdev",
   },
 
   category: "Technology",

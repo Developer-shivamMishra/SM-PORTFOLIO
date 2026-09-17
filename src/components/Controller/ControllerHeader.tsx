@@ -28,7 +28,7 @@ const ControllerHeader = ({ activeSection }: Props) => {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://x.com/akramcodez"
+            href="https://x.com/cheaf25master"
             className="cursor-pointer"
           >
             <RiTwitterXLine
@@ -38,7 +38,7 @@ const ControllerHeader = ({ activeSection }: Props) => {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/akramcodez"
+            href="https://www.linkedin.com/in/shivam-mishra-a6302429b/"
             className="cursor-pointer"
           >
             <FiLinkedin
@@ -50,7 +50,7 @@ const ControllerHeader = ({ activeSection }: Props) => {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/akramcodez"
+            href="https://github.com/Developer-shivamMishra"
             className="cursor-pointer"
           >
             <FiGithub
