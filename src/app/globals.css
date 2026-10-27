@@ -79,8 +79,8 @@
 }
 
 .dark {
-  --background: #000000;
-  --foreground: #ffffff;
+  --background: #0a0a0a;
+  --foreground: #fafafa;
   --card: #000000;
   --card-foreground: #ffffff;
   --popover: #000000;
@@ -138,7 +138,7 @@ h6 {
   }
   to {
     opacity: 1;
-    filter: blur(0);
+    filter: none;
   }
 }
 
@@ -161,6 +161,32 @@ h6 {
 .animate-blur-out {
   animation: blurFadeOut 0.7s ease-out forwards;
   animation-delay: 0.4s;
+}
+
+@keyframes dockEnter {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.dock-enter {
+  animation: dockEnter 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* GitHub contribution graph: fit card width, no horizontal scroll */
+.react-activity-calendar {
+  width: 100%;
+  max-width: 100%;
+}
+
+.react-activity-calendar svg {
+  display: block;
+  max-width: 100%;
 }
 
 @keyframes gridMove {

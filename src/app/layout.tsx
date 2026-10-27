@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/providers/theme-provder";
 import { Analytics } from "@vercel/analytics/next";
+import PortfolioShell from "@/components/layout/PortfolioShell";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -102,7 +103,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${nunito.variable} ${thasadith.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {children}
+          <PortfolioShell>{children}</PortfolioShell>
           <Analytics />
         </ThemeProvider>
       </body>

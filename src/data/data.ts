@@ -1,3 +1,15 @@
+export const profile = {
+  name: "Shivam Mishra",
+  role: "Software Developer",
+  tagline:
+    "A software developer who's always ready to explore new things, build real-world projects, and continuously sharpen DSA skills.",
+  availability:
+    "Available for freelance and internship opportunities.",
+  email: "sm2275470@gmail.com",
+  github: "https://github.com/Developer-shivamMishra",
+  githubUsername: "Developer-shivamMishra",
+};
+
 export const socials = [
   {
     name: "X (Twitter)",
@@ -29,8 +41,69 @@ export const socials = [
   },
 ];
 
+export type TechStackIcon =
+  | "javascript"
+  | "html"
+  | "css"
+  | "cpp"
+  | "react"
+  | "tailwind"
+  | "nodejs"
+  | "express"
+  | "mongodb"
+  | "git"
+  | "github"
+  | "postman"
+  | "cicd";
+
+export type TechStackItem = {
+  name: string;
+  icon: TechStackIcon;
+};
+
+export type TechStackGroup = {
+  category: string;
+  items: TechStackItem[];
+};
+
+export const techStack: TechStackGroup[] = [
+  {
+    category: "Languages",
+    items: [
+      { name: "JavaScript", icon: "javascript" },
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "C++", icon: "cpp" },
+    ],
+  },
+  {
+    category: "Frontend",
+    items: [
+      { name: "React.js", icon: "react" },
+      { name: "Tailwind CSS", icon: "tailwind" },
+    ],
+  },
+  {
+    category: "Backend & Database",
+    items: [
+      { name: "Node.js", icon: "nodejs" },
+      { name: "Express.js", icon: "express" },
+      { name: "MongoDB", icon: "mongodb" },
+    ],
+  },
+  {
+    category: "Tools & Platforms",
+    items: [
+      { name: "Git", icon: "git" },
+      { name: "GitHub", icon: "github" },
+      { name: "Postman", icon: "postman" },
+      { name: "CI/CD", icon: "cicd" },
+    ],
+  },
+];
+
 export const skills = [
-  "MERN",,
+  "MERN",
   "Tailwind",
   "MongoDB",
   "Postman",
@@ -40,14 +113,35 @@ export const skills = [
   "CI/CD",
 ];
 
-export const projects = [
+export type Project = {
+  name: string;
+  tech: string;
+  desc: string;
+  liveLink: string;
+  features?: string[];
+};
+
+export const projects: Project[] = [
+  {
+    name: "Prepwise — AI Career Preparation",
+    tech: "AI • Resume Tools • Full Stack",
+    desc:
+      "An AI-powered career preparation platform that helps job seekers analyze resumes, match skills to job descriptions, identify skill gaps, and prepare for interviews with personalized learning plans.",
+    features: [
+      "AI Resume Builder & Analysis — create and review resumes with AI feedback.",
+      "Resume–Job Matching — measure how well your resume fits a target job description.",
+      "Skill-Gap Analysis — see missing skills and where to improve.",
+      "AI Interview Preparation — practice technical and behavioral questions.",
+      "Personalized Preparation Plans — turn insights into clear, actionable next steps.",
+    ],
+    liveLink: "https://resumemeter.vercel.app/",
+  },
   {
     name: "DevNexus",
     tech: "Reactjs • Tailwind • MongoDB",
     desc: "DevNexus is a simple platform where developers can find and connect with other developers.",
     liveLink: "https://devs-nexus-web.vercel.app/",
   },
-  
 ];
 
 export const repos = [
