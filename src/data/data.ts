@@ -149,7 +149,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "InterviewPack",
-    tech: "NEXT.JS • REACT • TAILWIND • NODE.JS • MONGODB • AI • RAG",
+  tech: " REACT • TAILWIND • NODE.JS • MONGODB • AI • REDIS",
     desc:
       "AI-powered career prep that analyzes resumes, matches roles, finds skill gaps, and builds personalized interview practice—with technical and behavioral questions tailored to your resume and target role.",
     liveLink: "https://interviewpack.site",
