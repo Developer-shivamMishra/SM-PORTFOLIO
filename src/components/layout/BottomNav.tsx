@@ -3,14 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import { Home, FolderOpen, UserRound, PenLine, Sun, Moon } from "lucide-react";
+import { FolderOpen, UserRound, PenLine, Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "/", label: "Home", icon: Home },
+  { href: "/", label: "About", icon: UserRound },
   { href: "/work", label: "Work", icon: FolderOpen },
-  { href: "/about", label: "About", icon: UserRound },
   { href: "/writing", label: "Writing", icon: PenLine },
 ];
 
@@ -110,7 +109,9 @@ export default function BottomNav() {
   }, []);
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
+    if (href === "/") {
+      return pathname === "/" || pathname === "/about";
+    }
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 

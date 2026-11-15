@@ -1,9 +1,12 @@
 "use client";
 
+import { Bot, Boxes } from "lucide-react";
 import {
   SiCplusplus,
   SiCss3,
+  SiDocker,
   SiExpress,
+  SiHuggingface,
   SiGit,
   SiGithub,
   SiGithubactions,
@@ -11,9 +14,13 @@ import {
   SiJavascript,
   SiMongodb,
   SiNodedotjs,
+  SiOpenai,
+  SiOpenapiinitiative,
   SiPostman,
+  SiRedis,
   SiReact,
   SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 import { techStack, type TechStackIcon } from "@/data/data";
 import { cn } from "@/lib/utils";
@@ -23,6 +30,7 @@ const iconMap: Record<
   { Icon: React.ComponentType<{ className?: string }>; className: string }
 > = {
   javascript: { Icon: SiJavascript, className: "text-[#F7DF1E]" },
+  typescript: { Icon: SiTypescript, className: "text-[#3178C6]" },
   html: { Icon: SiHtml5, className: "text-[#E34F26]" },
   css: { Icon: SiCss3, className: "text-[#1572B6]" },
   cpp: { Icon: SiCplusplus, className: "text-[#00599C]" },
@@ -31,10 +39,17 @@ const iconMap: Record<
   nodejs: { Icon: SiNodedotjs, className: "text-[#339933]" },
   express: { Icon: SiExpress, className: "text-[#888888]" },
   mongodb: { Icon: SiMongodb, className: "text-[#47A248]" },
+  redis: { Icon: SiRedis, className: "text-[#DC382D]" },
+  restapi: { Icon: SiOpenapiinitiative, className: "text-[#6BA539]" },
   git: { Icon: SiGit, className: "text-[#F05032]" },
   github: { Icon: SiGithub, className: "text-foreground" },
   postman: { Icon: SiPostman, className: "text-[#FF6C37]" },
+  docker: { Icon: SiDocker, className: "text-[#2496ED]" },
   cicd: { Icon: SiGithubactions, className: "text-[#2088FF]" },
+  microservices: { Icon: Boxes, className: "text-[#A78BFA]" },
+  llm: { Icon: SiOpenai, className: "text-[#10A37F]" },
+  rag: { Icon: SiHuggingface, className: "text-[#FFD21E]" },
+  aiagents: { Icon: Bot, className: "text-[#38BDF8]" },
 };
 
 function TechPill({ name, icon }: { name: string; icon: TechStackIcon }) {
@@ -53,10 +68,10 @@ function TechPill({ name, icon }: { name: string; icon: TechStackIcon }) {
 export default function TechStack() {
   return (
     <section className="space-y-3">
-      <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-        Tech Stack
+      <h2 className="font-[family-name:var(--font-jetbrains-mono)] text-[11px] uppercase tracking-wide text-muted-foreground">
+        Tech stack
       </h2>
-      <div className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/30">
+      <div className="overflow-hidden rounded-sm border border-border bg-card/40">
         {techStack.map((group, index) => (
           <div
             key={group.category}
@@ -66,7 +81,7 @@ export default function TechStack() {
                 "border-b border-dotted border-white/10",
             )}
           >
-            <p className="shrink-0 text-sm text-muted-foreground sm:w-36 md:w-40">
+            <p className="shrink-0 text-sm text-muted-foreground sm:w-40 md:w-44">
               {group.category}
             </p>
             <div className="flex flex-wrap gap-2">

@@ -1,79 +1,104 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { projects, profile } from "@/data/data";
-import { PillButton } from "@/components/ui/pill-button";
-import { FaGithub } from "react-icons/fa";
+import { projects, profile, type Project } from "@/data/data";
+
+const mono = "font-[family-name:var(--font-jetbrains-mono)]";
+
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <article className="flex h-full flex-col overflow-hidden rounded-sm border border-border bg-card/50 shadow-sm dark:bg-zinc-900/40">
+      <Link
+        href={project.liveLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group block border-b border-border"
+      >
+        {project.image ? (
+          <div className="aspect-[4/3] overflow-hidden bg-muted/30">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={project.image}
+              alt={`${project.name} preview`}
+              className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+          </div>
+        ) : (
+          <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-950">
+            <span className="text-sm font-semibold text-zinc-500 dark:text-zinc-500">
+              {project.name}
+            </span>
+          </div>
+        )}
+      </Link>
+
+      <div className="flex flex-1 flex-col gap-3 p-4 md:p-5">
+        <div>
+          <h2 className="text-lg font-bold tracking-tight text-foreground">
+            {project.name}
+          </h2>
+          <p
+            className={`mt-1.5 text-[11px] font-medium uppercase tracking-wide text-sky-600 dark:text-sky-400 ${mono}`}
+          >
+            {project.tech}
+          </p>
+        </div>
+
+        <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+          {project.desc}
+        </p>
+
+        <div className={`flex flex-wrap gap-x-4 gap-y-1 text-sm ${mono}`}>
+          <Link
+            href={project.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/80 transition-colors hover:text-sky-600 dark:hover:text-sky-400"
+          >
+            → live
+          </Link>
+          {project.sourceLink ? (
+            <Link
+              href={project.sourceLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/80 transition-colors hover:text-sky-600 dark:hover:text-sky-400"
+            >
+              → source
+            </Link>
+          ) : null}
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default function WorkPage() {
   return (
     <div className="animate-blur-in space-y-8">
-      <header className="space-y-2">
-        <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
-          Selected Work
-        </h1>
-        <p className="text-sm text-muted-foreground md:text-base">
-          A few projects that highlight how I think, build, and ship.
-        </p>
+      <header
+        className={`flex flex-wrap items-baseline justify-between gap-2 text-sm text-muted-foreground ${mono}`}
+      >
+        <span className="text-foreground/90">~/projects</span>
+        <span>things i built</span>
       </header>
 
-      <div className="space-y-10">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-5">
         {projects.map((project) => (
-          <article key={project.name} className="space-y-4">
-            <Link
-              href={project.liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-violet-950/40 via-zinc-900 to-zinc-950 p-1 transition-colors hover:border-white/20"
-            >
-              <div className="flex aspect-[16/10] items-center justify-center rounded-[14px] bg-zinc-950/80">
-                <span className="text-lg font-semibold text-white/90 md:text-2xl">
-                  {project.name}
-                </span>
-              </div>
-            </Link>
-
-            <div className="space-y-2">
-              <div className="flex flex-wrap items-center gap-2">
-                <h2 className="text-lg font-semibold">{project.name}</h2>
-                <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-emerald-400">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                  Live
-                </span>
-              </div>
-              <p className="text-xs text-muted-foreground">{project.tech}</p>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {project.desc}
-              </p>
-              {project.features?.length ? (
-                <ul className="space-y-1.5 pt-1 text-sm text-muted-foreground">
-                  {project.features.map((feature) => (
-                    <li key={feature} className="flex gap-2 leading-relaxed">
-                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted-foreground" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              <div className="flex flex-wrap gap-2 pt-1">
-                <PillButton href={project.liveLink} external>
-                  Visit site
-                  <ArrowUpRight className="h-3.5 w-3.5 opacity-60" />
-                </PillButton>
-              </div>
-            </div>
-          </article>
+          <ProjectCard key={project.name} project={project} />
         ))}
       </div>
 
-      <div className="border-t border-white/10 pt-6">
-        <PillButton href={profile.github} external>
-          <FaGithub className="h-4 w-4" />
-          More projects on GitHub
-          <ArrowUpRight className="h-3.5 w-3.5 opacity-60" />
-        </PillButton>
-      </div>
+      <footer className={`border-t border-border pt-6 text-sm ${mono}`}>
+        <Link
+          href={profile.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground transition-colors hover:text-sky-600 dark:hover:text-sky-400"
+        >
+          → more on github
+        </Link>
+      </footer>
     </div>
   );
 }

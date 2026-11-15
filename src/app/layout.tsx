@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/providers/theme-provder";
 import { Analytics } from "@vercel/analytics/next";
 import PortfolioShell from "@/components/layout/PortfolioShell";
+import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jetbrains-mono",
+});
 
 const nunito = localFont({
   src: "./fonts/Nunito/Nunito-VariableFont_wght.ttf",
@@ -101,8 +108,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${nunito.variable} ${thasadith.variable}`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <body
+        className={`${nunito.variable} ${thasadith.variable} ${jetbrainsMono.variable}`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <PortfolioShell>{children}</PortfolioShell>
           <Analytics />
         </ThemeProvider>

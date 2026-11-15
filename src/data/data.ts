@@ -2,12 +2,13 @@ export const profile = {
   name: "Shivam Mishra",
   role: "Software Developer",
   tagline:
-    "A software developer who's always ready to explore new things, build real-world projects, and continuously sharpen DSA skills.",
+    "A software developer building full-stack products and actively learning AI: LLMs, RAG, and AI agents alongside sharpening DSA skills.",
   availability:
     "Available for freelance and internship opportunities.",
   email: "sm2275470@gmail.com",
   github: "https://github.com/Developer-shivamMishra",
   githubUsername: "Developer-shivamMishra",
+  aboutImage: "/about/galaxy.png",
 };
 
 export const socials = [
@@ -43,6 +44,7 @@ export const socials = [
 
 export type TechStackIcon =
   | "javascript"
+  | "typescript"
   | "html"
   | "css"
   | "cpp"
@@ -51,10 +53,17 @@ export type TechStackIcon =
   | "nodejs"
   | "express"
   | "mongodb"
+  | "redis"
+  | "restapi"
   | "git"
   | "github"
   | "postman"
-  | "cicd";
+  | "docker"
+  | "cicd"
+  | "microservices"
+  | "llm"
+  | "rag"
+  | "aiagents";
 
 export type TechStackItem = {
   name: string;
@@ -71,6 +80,7 @@ export const techStack: TechStackGroup[] = [
     category: "Languages",
     items: [
       { name: "JavaScript", icon: "javascript" },
+      { name: "TypeScript", icon: "typescript" },
       { name: "HTML", icon: "html" },
       { name: "CSS", icon: "css" },
       { name: "C++", icon: "cpp" },
@@ -84,20 +94,33 @@ export const techStack: TechStackGroup[] = [
     ],
   },
   {
-    category: "Backend & Database",
+    category: "Backend, API & Cloud",
     items: [
       { name: "Node.js", icon: "nodejs" },
       { name: "Express.js", icon: "express" },
-      { name: "MongoDB", icon: "mongodb" },
+     
+      { name: "REST API", icon: "restapi" },
+      { name: "Docker", icon: "docker" },
+      { name: "CI/CD", icon: "cicd" },
+      { name: "Microservices", icon: "microservices" },
     ],
   },
   {
-    category: "Tools & Platforms",
+    category: "AI & Learning",
     items: [
+      { name: "LLM", icon: "llm" },
+      { name: "RAG", icon: "rag" },
+      { name: "AI Agents", icon: "aiagents" },
+    ],
+  },
+  {
+    category: "Database, Technology Testing & Tools",
+    items: [
+      { name: "MongoDB", icon: "mongodb" },
+      { name: "Redis", icon: "redis" },
       { name: "Git", icon: "git" },
       { name: "GitHub", icon: "github" },
       { name: "Postman", icon: "postman" },
-      { name: "CI/CD", icon: "cicd" },
     ],
   },
 ];
@@ -118,28 +141,24 @@ export type Project = {
   tech: string;
   desc: string;
   liveLink: string;
+  image?: string;
+  sourceLink?: string;
   features?: string[];
 };
 
 export const projects: Project[] = [
   {
-    name: "Prepwise — AI Career Preparation",
-    tech: "AI • Resume Tools • Full Stack",
+    name: "InterviewPack",
+    tech: "NEXT.JS • REACT • TAILWIND • NODE.JS • MONGODB • AI • RAG",
     desc:
-      "An AI-powered career preparation platform that helps job seekers analyze resumes, match skills to job descriptions, identify skill gaps, and prepare for interviews with personalized learning plans.",
-    features: [
-      "AI Resume Builder & Analysis — create and review resumes with AI feedback.",
-      "Resume–Job Matching — measure how well your resume fits a target job description.",
-      "Skill-Gap Analysis — see missing skills and where to improve.",
-      "AI Interview Preparation — practice technical and behavioral questions.",
-      "Personalized Preparation Plans — turn insights into clear, actionable next steps.",
-    ],
-    liveLink: "https://resumemeter.vercel.app/",
+      "AI-powered career prep that analyzes resumes, matches roles, finds skill gaps, and builds personalized interview practice—with technical and behavioral questions tailored to your resume and target role.",
+    liveLink: "https://interviewpack.site",
   },
   {
     name: "DevNexus",
-    tech: "Reactjs • Tailwind • MongoDB",
-    desc: "DevNexus is a simple platform where developers can find and connect with other developers.",
+    tech: "REACT • TAILWIND • MONGODB",
+    desc:
+      "A simple platform where developers can discover projects, connect with peers, and grow their network in one place.",
     liveLink: "https://devs-nexus-web.vercel.app/",
   },
 ];
